@@ -5,7 +5,8 @@
     "permissions": [
       "activeTab",
       "storage",
-      "identity"
+      "identity",
+      "scripting"
     ],
     "background": {
       "service_worker": "background.js"
@@ -15,12 +16,12 @@
     },
     "content_scripts": [
       {
-        "matches": ["*://www.naukri.com/*"],
+        "matches": ["*://www.codingninjas.com/*"],
         "js": ["content.js"]
       }
     ],
     "oauth2": {
-      "client_id": "Ov23lis7FohHYsz5T5xp",
+      "client_id": "YOUR_CLIENT_ID",
       "scopes": [
         "repo"
       ]
