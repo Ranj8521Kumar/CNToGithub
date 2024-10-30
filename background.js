@@ -16,11 +16,11 @@ chrome.runtime.onInstalled.addListener(() => {
 
   async function pushToGitHub(problemData) {
     const token = await getToken();
-    const repo = 'your-repo-name';
+    const repo = 'coding-ninjas-problems';
     const path = `problems/${problemData.title}.md`;
     const content = btoa(`# ${problemData.title}\n\n${problemData.description}\n\n\`\`\`javascript\n${problemData.code}\n\`\`\``);
   
-    fetch(`https://api.github.com/repos/YOUR_USERNAME/${repo}/contents/${path}`, {
+    fetch(`https://api.github.com/repos/Ranj8521Kumar/${repo}/contents/${path}`, {
       method: 'PUT',
       headers: {
         'Authorization': `token ${token}`,
