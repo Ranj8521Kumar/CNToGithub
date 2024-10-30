@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Push Coding Ninjas Problems",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "identity"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.codingninjas.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "oauth2": {
+      "client_id": "YOUR_CLIENT_ID",
+      "scopes": [
+        "repo"
+      ]
+    }
+  }
